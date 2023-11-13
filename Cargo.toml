@@ -25,17 +25,14 @@ members = [
     "swayfmt",
     "test",
 ]
-exclude = [
-    "examples/*",
-    "swayfmt/test_macros",
-    "forc-test/test_data"
-]
+exclude = ["examples/*", "forc-test/test_data", "swayfmt/test_macros"]
 
 [workspace.dependencies]
 # Dependencies from the `fuel-core` repository:
 fuel-core-client = { version = "0.20.3", default-features = false }
 
 # Dependencies from the `fuel-vm` repository:
+fuel-core-keygen = "0.20.8"
 fuel-asm = "0.35.3"
 fuel-crypto = "0.35.3"
 fuel-types = "0.35.3"
@@ -58,7 +55,9 @@ repository = "https://github.com/FuelLabs/sway"
 
 [patch.crates-io]
 # Keep it until release of the `fuel-core`.
+fuel-core-keygen = { git = "https://github.com/FuelLabs/fuel-core", branch = "master" }
 fuel-core-client = { git = "https://github.com/FuelLabs/fuel-core", branch = "master" }
+fuel-crypto = { git = "https://github.com/FuelLabs/fuel-vm", branch = "master" }
 
 # Keep it until release of the `fuels-rs`.
 fuels-core = { git = "https://github.com/FuelLabs/fuels-rs", branch = "upgrade/fuel-core-master" }
@@ -67,4 +66,3 @@ fuels-accounts = { git = "https://github.com/FuelLabs/fuels-rs", branch = "upgra
 # Keep it until release of the `forc-wallet`.
 forc-wallet = { git = "https://github.com/FuelLabs/forc-wallet", branch = "upgrade/fuel-core-master" }
 fuels = { git = "https://github.com/FuelLabs/fuels-rs", branch = "upgrade/fuel-core-master" }
-

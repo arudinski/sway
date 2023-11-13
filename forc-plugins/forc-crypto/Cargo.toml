@@ -14,13 +14,13 @@ anyhow = "1.0.75"
 async-trait = "0.1.58"
 atty = "0.2.14"
 clap = { version = "3", features = ["derive", "env"] }
+crossterm = "0.27.0"
 forc-tracing = { version = "0.47.0", path = "../../forc-tracing" }
-fuel-core-types = { version = "0.20.5" }
+fuel-core-keygen = { workspace = true }
 fuel-crypto = { workspace = true }
-fuels-core = { workspace = true }
+#fuels-core = { workspace = true }
 futures = "0.3"
 hex = "0.4.3"
-libp2p-identity = { version = "0.2.4", features = ["secp256k1", "peerid"] }
 rand = "0.8"
 serde = "1.0"
 serde_json = "1"
